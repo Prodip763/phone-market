@@ -43,7 +43,7 @@ const displayPhoneDetail = phone => {
     console.log(phone);
     const phoneDetails = document.getElementById('phone-details');
     const div = document.createElement('div');
-    div.classList.add('card');
+    div.classList.add('card'.slice(0, 20));
     div.innerHTML = `
     <img src="${phone.image}" class="card-img-top" alt="...">
     <div class="card-body">
