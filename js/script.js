@@ -41,7 +41,7 @@ const loadPhoneDetail = Id => {
 }
 const displayPhoneDetail = phone => {
     console.log(phone);
-    const mealDetails = document.getElementById('phone-details');
+    const phoneDetails = document.getElementById('phone-details');
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML = `
@@ -49,8 +49,8 @@ const displayPhoneDetail = phone => {
     <div class="card-body">
       <h5 class="card-title">${phone.phone_name}</h5>
       <p class="card-text">${phone.slug}</p>
-      <a href=" <h2>Other Details</h2>${phone.mainFeatures.displaySize}, ${phone.mainFeatures.memory}, ${phone.releaseDate}" class="btn btn-primary ">Go somewhere</a>
+      <a href=" <h2>Other Details</h2>${phone.mainFeatures.displaySize}, ${phone.mainFeatures.memory}, ${phone.releaseDate} ${phone.sensor[0]}" class="btn btn-primary ">Go somewhere</a>
                 </div>
                 `;
-    mealDetails.appendChild(div);
+    phoneDetails.appendChild(div);
 }
